@@ -1,0 +1,209 @@
+[{
+		"nombre": "Taller de Diseño Gráfico V",
+		"creditaje": 9,
+		"directas": 6,
+		"dedicacion": [{
+				"nombre": "Valentina Espinoza",
+				"horas": [15, 17, 11, 11]
+			},
+			{
+				"nombre": "Deianira Reyes",
+				"horas": [13, 10, 10, 10]
+			},
+			{
+				"nombre": "Tomás López",
+				"horas": [14, 17, 23, 10]
+			},
+			{
+				"nombre": "Felipe Cabello",
+				"horas": [12, 14, 23, 10]
+			},
+			{
+				"nombre": "Felipe Sánchez",
+				"horas": [13, 13, 11, 10]
+			}
+		]
+	},
+	{
+		"nombre": "Seminario Gráfica Computacional I",
+		"creditaje": 3,
+		"directas": 3,
+		"dedicacion": [{
+				"nombre": "Valentina Espinoza",
+				"horas": [3, 3,	2, 4]
+			},
+			{
+				"nombre": "Deianira Reyes",
+				"horas": [3, 4,	3, 3]
+			},
+			{
+				"nombre": "Tomás López",
+				"horas": [3, 4, 3, 3]
+			},
+			{
+				"nombre": "Felipe Cabello",
+				"horas": [3, 4, 3, 3]
+			},
+			{
+				"nombre": "Felipe Sánchez",
+				"horas": [3, 3, 3, 3]
+			}
+		]
+	},
+	{
+		"nombre": "Seminario Producción Audiovisual I",
+		"creditaje": 3,
+		"directas": 3,
+		"dedicacion": [{
+				"nombre": "Valentina Espinoza",
+				"horas": [5, 9, 3, 6]
+			},
+			{
+				"nombre": "Deianira Reyes",
+				"horas": [0, 0,	0, 0]
+			},
+			{
+				"nombre": "Tomás López",
+				"horas": [4, 3, 6, 6]
+			},
+			{
+				"nombre": "Felipe Cabello",
+				"horas": [5, 5, 3, 6]
+			},
+			{
+				"nombre": "Felipe Sánchez",
+				"horas": [3, 3, 3, 6]
+			}
+		]
+	},
+	{
+		"nombre": "Seminario de Diseño Gráfico I",
+		"creditaje": 5,
+		"directas": 3,
+		"dedicacion": [{
+				"nombre": "Valentina Espinoza",
+				"horas": [0, 10, 21, 5]
+			},
+			{
+				"nombre": "Deianira Reyes",
+				"horas": [6, 0,	0, 12]
+			},
+			{
+				"nombre": "Tomás López",
+				"horas": [14, 5, 5, 12]
+			},
+			{
+				"nombre": "Felipe Cabello",
+				"horas": [8, 7, 5, 12]
+			},
+			{
+				"nombre": "Felipe Sánchez",
+				"horas": [11, 6, 5, 12]
+			}
+		]
+	},
+	{
+		"nombre": "Publicidad",
+		"creditaje": 3,
+		"directas": 3,
+		"dedicacion": [{
+				"nombre": "Valentina Espinoza",
+				"horas": [3, 3, 3, 7]
+			},
+			{
+				"nombre": "Deianira Reyes",
+				"horas": [6, 4, 11, 5]
+			},
+			{
+				"nombre": "Tomás López",
+				"horas": [8, 3, 3, 5]
+			},
+			{
+				"nombre": "Felipe Cabello",
+				"horas": [9, 3, 3, 5]
+			},
+			{
+				"nombre": "Felipe Sánchez",
+				"horas": [9, 3,	3, 5]
+			}
+		]
+	},
+	{
+		"nombre": "Seminario de Gestión I",
+		"creditaje": 3,
+		"directas": 3,
+		"dedicacion": [{
+				"nombre": "Valentina Espinoza",
+				"horas": [2, 3, 0, 3]
+			},
+			{
+				"nombre": "Deianira Reyes",
+				"horas": [3, 6, 4, 3]
+			},
+			{
+				"nombre": "Tomás López",
+				"horas": [5, 4, 3, 3]
+			},
+			{
+				"nombre": "Felipe Cabello",
+				"horas": [4, 4, 4, 3]
+			},
+			{
+				"nombre": "Felipe Sánchez",
+				"horas": [3, 5,	3, 3]
+			}
+		]
+	},
+	{
+		"nombre": "Práctica Profesional I",
+		"creditaje": 2,
+		"directas": 0,
+		"dedicacion": [{
+				"nombre": "Valentina Espinoza",
+				"horas": [4, 4, 6, 4]
+			},
+			{
+				"nombre": "Deianira Reyes",
+				"horas": [0, 0, 0, 3]
+			},
+			{
+				"nombre": "Tomás López",
+				"horas": [2, 3, 1, 3]
+			},
+			{
+				"nombre": "Felipe Cabello",
+				"horas": [5, 0, 16, 3]
+			},
+			{
+				"nombre": "Felipe Sánchez",
+				"horas": [0, 2, 4, 3]
+			}
+		]
+	},
+	{
+		"nombre": "Electivo III",
+		"creditaje": 3,
+		"directas": 3,
+		"dedicacion": [{
+				"nombre": "Valentina Espinoza",
+				"horas": [3, 3, 3, 3]
+			},
+			{
+				"nombre": "Deianira Reyes",
+				"horas": [3, 2, 0, 3]
+			},
+			{
+				"nombre": "Tomás López ",
+				"horas": [3, 3, 3, 3]
+			},
+			{
+				"nombre": "Felipe Cabello",
+				"horas": [4, 4, 4, 3]
+			},
+			{
+				"nombre": "Felipe Sánchez",
+				"horas": [3, 3, 4, 3]
+			}
+		]
+	}
+]

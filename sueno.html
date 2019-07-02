@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <link rel="shortcut icon" href="lapizicon.png" type="image/png"/>     
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Gráficos de mi trabajo académico</title>
+    <style>
+        body{
+            background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 1) 100%)
+        }
+        select {
+            border: none;
+            font-size: 99%;
+            background: rgba(8, 94, 176, .25);
+        }
+        p{
+            line-height: 1.75;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="row py-5">
+            <div class="col-11 col-md-10 col-xl-9 mx-auto">
+
+                <h1>Gráfico Sueño Semanal</h1>
+
+                <h3>Diseño Gráfico / Universidad de Chile</h3>
+
+                
+                <p>El siguiente gráfico indica las horas diarias de sueño que tuve durante 4 semanas. <strong>Se marca con color rojo los días en que dormí 5 horas o menos</strong>, debido a lo perjudicial para la salud que significa dormir menos. A la vez <strong>se marca en verde las veces que dormí más de 6 horas</strong>, debido a que <a href="https://www.elconfidencial.com/alma-corazon-vida/2018-06-19/dormir-ocho-horas-no-es-suficiente-cientifico_1578870/">se recomienda dormir mínimo un poco más de 8 horas diarias para mantenerse saludable</a>. Las 6 horas de sueño son el punto límite, ya que es el mínimo con el que puedo estudiar de forma medianamente buena y resistir una semana con gran carga académica.</p>
+
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade tabla-semestral" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr><th>Código</th><th>Asignatura</th><th class="text-center">Créditos SCT</th></tr>
+                        </thead>
+                        <tbody id="tableado">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Valentina Espinoza | Gráfica Computacional I 2019</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Portada <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="septimo.html">Séptimo Semestre</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="sueno.html">Sueño Semanal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="viaje.html">Viaje Semanal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tiempo.html">Tiempo dentro FAU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="estres.html">Estrés</a>
+          </li>            
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Más info</a>
+          </li>               
+        </ul>
+      </div>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    
+<script>
+var data;
+var n;
+function preload() {
+	data = loadJSON('https://api.myjson.com/bins/10qs85');
+}
+function setup() {
+	n = 28 //data.serie.length;
+	console.log(n);
+	console.log(data);
+	var canvas = createCanvas(windowWidth, windowHeight);
+	canvas.position(0,0);
+	canvas.style('z-index','-1');
+	noLoop();
+	document.getElementsByTagName("span")[1].innerHTML = data.serie[0].valor;
+}
+
+function draw() {
+	fill(255);
+	background(255);
+	translate(40,0);
+	noStroke();
+	for(var i = 0; i < n; i++){
+		var x = (windowWidth/n)*i;
+		var y = data.serie[i].valor;
+		var mapeado = map(y,0,20,windowHeight,0);
+		if (data.serie[i].valor < 6){
+		fill(255,0,0);
+		}else{
+		fill(0,200,0);
+		}
+		textSize(13);
+		textAlign(CENTER);
+		text(data.serie[i].valor+"\n•",x, mapeado-14);
+		textSize(10);
+		text(data.serie[i].fecha.substring(0,7),x, windowHeight-80);
+		vertex(x,mapeado)
+	}
+}
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
